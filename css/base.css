@@ -1655,3 +1655,14 @@ code {
         padding: 8px 12px;
     }
 }
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+
+	#work p {
+		margin-bottom: 12px;
+	}
+	#work h5 {
+		margin-bottom: 12px;
+	}
+}
