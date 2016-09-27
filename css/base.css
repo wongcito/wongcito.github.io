@@ -1624,3 +1624,34 @@ code {
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
+
+/* La solución será centrar el menu tratandolo como si fuera texto. */
+ 
+/* Mobile */
+@media only screen and (max-width: 767px) {
+    /* Centramos como si fuera texto. Se aplica al contenedor del texto. */
+    nav ul {
+        text-align: center;
+    }
+ 
+    nav ul li {
+        display: inline-block; /* hacemos que LI se comporte como un texto (inline o inline-block) */
+       
+        /* reseteamos algunos estilos que ya no usaremos */
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+ 
+    nav ul li a {
+        /* inline-block aquí para que tome los tamaños asignados al usar PADDING */
+        display: inline-block;
+    }
+ 
+    nav ul li a button {
+        /* inline-block aquí para que tome los tamaños asignados al usar PADDING */
+        display: inline-block;
+ 
+        /* siendo el último elemento, a él le asignamos margen interno, el suficiente para que pueda ser tocado con un dedo. */
+        padding: 8px 12px;
+    }
+}
